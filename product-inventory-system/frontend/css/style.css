@@ -1,0 +1,345 @@
+/* ============================================================
+   style.css - Product Inventory Management System
+   Custom Styles - Clean and Simple Design
+   ============================================================ */
+
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+/* ---- CSS Variables for easy theming ---- */
+:root {
+    --primary-color: #4361ee;
+    --primary-dark: #3451d1;
+    --sidebar-bg: #1e1e2e;
+    --nav-height: 60px;
+    --card-radius: 12px;
+    --body-bg: #f0f2f5;
+    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Base Styles ---- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--body-bg);
+    color: #2d3748;
+    min-height: 100vh;
+}
+
+/* ---- Navbar ---- */
+#mainNav {
+    background-color: var(--primary-color);
+    height: var(--nav-height);
+    box-shadow: 0 2px 8px rgba(67, 97, 238, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#mainNav .navbar-brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+}
+
+/* ---- Stat Cards ---- */
+.stat-card {
+    border: none;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #718096;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin: 0;
+    line-height: 1;
+}
+
+.stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* ---- General Cards ---- */
+.card {
+    border: none;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+/* ---- Table Styles ---- */
+.table thead tr {
+    background-color: #f7fafc;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.table thead th {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 14px 12px;
+    border: none;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #f0f2f5;
+    transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.table tbody td {
+    padding: 14px 12px;
+    vertical-align: middle;
+    font-size: 0.92rem;
+    border: none;
+}
+
+/* ---- Product Image in Table ---- */
+.product-thumb {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+}
+
+.product-thumb-placeholder {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    background-color: #edf2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0aec0;
+    font-size: 1.3rem;
+    border: 2px solid #e2e8f0;
+}
+
+/* ---- Stock Badge ---- */
+.stock-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* ---- Action Buttons ---- */
+.btn-action {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: all 0.15s ease;
+}
+
+.btn-action:hover {
+    transform: scale(1.05);
+}
+
+/* ---- Product Cards (Card View) ---- */
+.product-card {
+    border: none;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-card-placeholder {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #e2e8f0 0%, #edf2f7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0aec0;
+    font-size: 3rem;
+}
+
+.product-card .card-body {
+    padding: 1rem;
+}
+
+.product-card .product-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    color: #2d3748;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .product-price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.product-card .product-category {
+    font-size: 0.75rem;
+    color: #718096;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* ---- Image Preview ---- */
+.preview-img {
+    max-width: 140px;
+    max-height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ---- Search Bar ---- */
+.input-group .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.input-group .input-group-text {
+    border-radius: 8px 0 0 8px;
+}
+
+.input-group .form-control {
+    border-radius: 0;
+}
+
+/* ---- Primary Button ---- */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 18px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* ---- Toast Override ---- */
+#toastNotification.bg-success {
+    background-color: #38a169 !important;
+    color: white;
+}
+
+#toastNotification.bg-danger {
+    background-color: #e53e3e !important;
+    color: white;
+}
+
+/* ---- Modal ---- */
+.modal-header {
+    background-color: #fafafa;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* ---- Form Styling ---- */
+.form-control, .form-select {
+    border-radius: 8px;
+    border-color: #cbd5e0;
+    font-size: 0.92rem;
+    padding: 9px 14px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.form-label {
+    font-size: 0.88rem;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+/* ---- Empty State ---- */
+#emptyState i {
+    opacity: 0.35;
+}
+
+/* ---- Loading Spinner ---- */
+#loadingSpinner .spinner-border {
+    border-width: 3px;
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width: 576px) {
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* ---- Category color dots ---- */
+.cat-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}

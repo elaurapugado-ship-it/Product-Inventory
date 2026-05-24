@@ -1,0 +1,6 @@
+# Database credentials - never push this
+backend/config/database.php
+
+# Uploaded product images - too large for git
+backend/uploads/*
+!backend/uploads/.gitkeep
