@@ -1,9 +1,4 @@
-/* ============================================================
-   style.css - Product Inventory Management System
-   Custom Styles - Clean and Simple Design
-   ============================================================ */
 
-/* ---- Google Fonts ---- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 /* ---- CSS Variables for easy theming ---- */
@@ -240,7 +235,7 @@ body {
     border-radius: 8px;
 }
 
-/* ---- Search Bar ---- */
+/* ----This is For Search Bar ---- */
 .input-group .form-control:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
