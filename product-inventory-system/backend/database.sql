@@ -1,16 +1,12 @@
--- ============================================================
--- Product Inventory Management System
--- Database Setup File
--- Author: Student Developer
--- ============================================================
 
--- Create the database
+
+-- This code is For Create the database
 CREATE DATABASE IF NOT EXISTS product_inventory_db;
 
--- Use the database
+--To  Use the database
 USE product_inventory_db;
 
--- Create products table
+--To  Create products table
 CREATE TABLE IF NOT EXISTS products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(100) NOT NULL,
@@ -22,7 +18,7 @@ CREATE TABLE IF NOT EXISTS products (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert some sample products to get started
+--This is some example data to see the actual system
 INSERT INTO products (product_name, category, price, stock, description) VALUES
 ('Wireless Headphones', 'Electronics', 1299.00, 25, 'High-quality wireless headphones with noise cancellation and 30-hour battery life.'),
 ('Running Shoes', 'Footwear', 2499.00, 40, 'Lightweight running shoes with extra cushion for long distance comfort.'),
